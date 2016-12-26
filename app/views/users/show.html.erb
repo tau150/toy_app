@@ -11,9 +11,13 @@
 </p>
 
 <p>
-  <strong>Microposts:</strong>
-  <%= @user.microposts.first %>
+  <strong>Microposts:</strong> <br>
+  <% @user.microposts.each do |user| %>
+        <%= user.content %> <br>
+    <% end %>
 </p>
+
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
